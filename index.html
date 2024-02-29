@@ -1,12 +1,18 @@
 <html> 
   <head>         
-    <title>Untitled</title>     
+    <title>Untitled</title>  
+    <script>
+      function handleSubmit() {
+        var username = document.getElementById('field1').value;
+        alert(username);
+        // You can add additional logic here, like submitting the form via AJAX
+      }
+    </script>   
   </head>     
   <body>         
-    <form method="get" action="accountManagement.php" onsubmit="alert(document.getElementById('field1').value)">
+    <form method="get" action="accountManagement.php">
       <input name="username" type="text" id="field1" autocomplete="off" class="ui-widget ui-state-default ui-corner-all field">
-      <input name="submit" class="ui-button" type="submit" value="Submit">
+      <button type="button" onclick="handleSubmit()">Submit</button>
     </form>
   </body>
 </html>
-
